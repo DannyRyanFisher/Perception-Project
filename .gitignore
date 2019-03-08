@@ -1,0 +1,16 @@
+.DS_Store
+.extract.py.swp
+clustering.pyc
+detect.pyc
+extract.pyc
+filtering.pyc
+grasp_server.py
+object_identifier.py
+object_recognition.py
+pcl_helper.py
+pcl_helper.pyc
+pr2_safe_spawner.sh
+project_template.py
+rospy_message_converter
+segmentation.pyc
+temp.py
