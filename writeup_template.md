@@ -27,13 +27,13 @@ Image 1- Noisy Image
 ![image_1](./photos/Image_1-Noisy-PC.png)
 
 Image 2- Statistical Outlier Filterered Point Cloud
-![image_2](./photos/Image_2-SOF-Filtered.png)
+![image_2](./photos/Image_2-SOF-FIltered.png)
 
 Image 3- Volume Element (Voxel) Downsampled Point Cloud
 ![image_3](./photos/Image_3-Voxel-Filtered.png)
 
 Image 4- Passthrough Filtered Point Cloud
-![image_4](./photos/Image_4-Passthrough-filtered.png)
+![image_4](./photos/Image_4-Passthough-filtered.png)
 
 
 #### Segmenation
