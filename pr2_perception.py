@@ -97,23 +97,8 @@ def pr2_mover(detected_objects):
                 yaml_dict = make_yaml_dict(test_scene_num, arm_name, object_name, pick_pose, place_pose)
                 dict_list.append(yaml_dict)
 
-                # Wait for 'pick_place_routine' service to come up
-                # rospy.wait_for_service('pick_place_routine')
-
-                # try:
-                #     pick_place_routine = rospy.ServiceProxy('pick_place_routine', PickPlace)
-
-                #     # TODO: Insert your message variables to be sent as a service request
-                #     resp = pick_place_routine(test_scene_num, object_name, arm_name, pick_pose, place_pose)
-
-                #     print ("Response: ",resp.success)
-
-                # except rospy.ServiceException, e:
-                #     print "Service call failed: %s"%e
-
     # Output your request parameters into output yaml file
-#    send_to_yaml('output_3.yaml', dict_list)
-#    send_to_yaml('output_{}.yaml'.format(test_scene_num.data), dict_list)
+    send_to_yaml('output_{}.yaml'.format(test_scene_num.data), dict_list)
 
 ###############################################################################
 # Callback function for your Point Cloud Subscriber
@@ -133,12 +118,12 @@ def pcl_callback(pcl_msg):
     clusters = pcl_to_ros(cluster_cloud)
 
     # Publish ROS messages
-#NOTE
+
     pcl_objects_pub.publish(objects)
     pcl_table_pub.publish(table)
     pcl_cluster_pub.publish(clusters)
 
-  #Note:objects not cloud_objects
+
     detected_objects = \
     detect_objects(cluster_indices, objects_pcl, white_cloud, clf,
                    object_markers_pub, scaler, encoder)
@@ -149,17 +134,12 @@ def pcl_callback(pcl_msg):
 
     return
 
-    # Suggested location for where to invoke your pr2_mover() function within pcl_callback()
-    # Could add some logic to determine whether or not your object detections are robust
-    # before calling pr2_mover()
+    # Invoke your pr2_mover() function within pcl_callback()
+ 
     try:
         pr2_mover(detected_objects)
     except rospy.ROSInterruptException:
         pass
-
-
-
-    # TODO: Output your request parameters into output yaml file
 
 
 if __name__ == '__main__':
@@ -198,23 +178,3 @@ if __name__ == '__main__':
 
     while not rospy.is_shutdown():
      rospy.spin()
-
-###############################################################################
-
-    # TODO: Initialize variables
-
-    # TODO: Get/Read parameters
-
-    # TODO: Parse parameters into individual variables
-
-    # TODO: Rotate PR2 in place to capture side tables for the collision map
-
-    # TODO: Loop through the pick list
-
-        # TODO: Get the PointCloud for a given object and obtain it's centroid
-
-        # TODO: Create 'place_pose' for the object
-
-        # TODO: Assign the arm to be used for pick_place
-
-        # TODO: Create a list of dictionaries (made with make_yaml_dict()) for later output to yaml format
