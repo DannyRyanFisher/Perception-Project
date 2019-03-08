@@ -175,21 +175,13 @@ Image 14- Normalised Confusion Matrix for pick-list 3
 
 - Improvement 1: filter and segment these objects from the point cloud data
 
-- Critique 2: The model is weakest at differentiating between objects XXX and 
-  XXX. 
+- Critique 2: The model is weakest at differentiating between soaps and 
+  biscuits. 
 
 - Improvement 2: Increase the quality of the training set data by either: 
   - increasing the number of iterations in captured_features
   - Increase the number of point_cloud data points by decreasing the voxel-grid 
     downsampling
-
-- Critique 3: The object 'biscuits' consistently is labelled twice, notably
-  in the environment XXX.
-
-- Improvement 3: Similar methods as explained in Improvement 2 also including
-  optimising the HSV values for greater robustness of histogram for biscuits
-  model.
-
 
 
 
