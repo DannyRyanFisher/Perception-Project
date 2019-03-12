@@ -39,8 +39,8 @@ def filter_in_y_dimension(passthrough):
 
   filter_axis = 'y'
   passthrough.set_filter_field_name(filter_axis)
-  axis_min = -0.5
-  axis_max = 0.5
+  axis_min = -0.45
+  axis_max = 0.45
   passthrough.set_filter_limits(axis_min, axis_max)
   return passthrough
 

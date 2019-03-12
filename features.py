@@ -54,6 +54,8 @@ def compute_normal_histograms(normal_cloud):
 
     a = Histogram(norm_x_vals, norm_y_vals, norm_z_vals)
 
+    a.bins_range = (-1, 1)
+
     normed_features = a.generate_normalised_concatenated_histogram()
 
     return normed_features
