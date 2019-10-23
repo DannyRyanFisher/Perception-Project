@@ -1,14 +1,7 @@
 ## Project: Perception Pick & Place
 ### Writeup of the project.
 
-### Exercise 1, 2 and 3 pipeline implemented
-#### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
-
-### Note
-For Exercise 1, 2 and 3, the functions are called within pcl_callback 
-function of pr2_perception.py but they're contents are contained within 
-the scripts directory.
-
+### Pipeline for filtering and RANSAC plane fitting implemented.
 
 #### Filtering
 
@@ -56,7 +49,7 @@ Image 6- Object data points filtered using RANSAC algorithm (with noise).
 
 
 
-#### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
+#### 2. Perception Pipeline including clustering for segmentation implemented.  
 
 #### Clustering
 
@@ -70,7 +63,7 @@ Image 7- Clustered point cloud of objects (with some noise)
 
 
 
-#### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
+#### 2. Features extracted and SVM trained.  Object recognition implemented.
 
 #### Object_Recognition
 
